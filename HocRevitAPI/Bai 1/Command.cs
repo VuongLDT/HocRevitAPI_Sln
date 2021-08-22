@@ -35,7 +35,7 @@ namespace HocRevitAPI
             // Code here - testing update 2xxy
             ICollection<ElementId> elementIds = uidoc.Selection.GetElementIds();
 
-            return Autodesk.Revit.UI.Result.Succeeded;  // Trả về kết quả thành công.xy
+            return Autodesk.Revit.UI.Result.Succeeded;  // Trả về kết quả thành công.xyz
         }
     }
 }
