@@ -57,8 +57,8 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Bai 1\Command.cs" />
-    <Compile Include="Bai 3 - WPF\UserControl1.xaml.cs">
-      <DependentUpon>UserControl1.xaml</DependentUpon>
+    <Compile Include="Bai 3 - WPF\WindowWPF.xaml.cs">
+      <DependentUpon>WindowWPF.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -67,7 +67,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Page Include="Bai 3 - WPF\UserControl1.xaml">
+    <Page Include="Bai 3 - WPF\WindowWPF.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

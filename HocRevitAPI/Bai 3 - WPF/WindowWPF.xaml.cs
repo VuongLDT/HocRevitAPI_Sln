@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HocRevitAPI.Bai_3___WPF
+namespace HocRevitAPI.Bai_3_WPF
 {
     /// <summary>
-    /// Interaction logic for UserControl1.xaml
+    /// Interaction logic for WindowWPF.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class WindowWPF : Window
     {
-        public UserControl1()
+        public WindowWPF()
         {
             InitializeComponent();
         }
