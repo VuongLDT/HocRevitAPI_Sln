@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+  //Phần này chỉ dùng khi file .dll và .addin được copy vào thư mục mặc định và xuất hiện trong tab Add-Ins.
+  //Nếu sử dụng Ribbon tab riêng để gọi các lệnh này thì ko cần dùng tới phần này.
+    //Tên lệnh sẽ hiển thị ở dòng lệnh trong tab Add-Ins
+    <Name>Command HocRevitAPI</Name>
+    <Description>Some description for HocRevitAPI</Description>
+    //Đường dẫn tới file + tên file nếu file nằm ở vị trí bất kì.
+    //Nếu có SubFolder: .\SubFolder\fileName.dll
+    //Nếu nằm cùng thư mục file .addin thì không cần đường dẫn
+    <Assembly>HocRevitAPI.dll</Assembly>
+    //Tên namespace + Class
+    <FullClassName>HocRevitAPI.Command</FullClassName>
+    //Mã GUID
+    <AddInId>f0c0aa39-26dd-4e7b-b56c-8a1246c688f7</AddInId>
+    <VendorId>VuongLDT</VendorId>
+    <VendorDescription>VuongLDT, thanhvuong92@gmail.com</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+  //Phần này dùng cho tạo Ribbon tab.
+    <Name>Application HocRevitAPI</Name>
+    <Assembly>HocRevitAPI.dll</Assembly>
+    //Tên namespace + class
+    <FullClassName>HocRevitAPI.App</FullClassName>
+    <AddInId>16f10ae2-655c-4359-b9f8-d167afcb9ee1</AddInId>
+    <VendorId>VuongLDT</VendorId>
+    <VendorDescription>VuongLDT, thanhvuong92@gmail.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
