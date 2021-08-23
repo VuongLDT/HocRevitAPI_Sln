@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:HocRevitAPI.Bai_3_WPF"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <!--<Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"/>
             <ColumnDefinition Width="100"/>
@@ -23,8 +23,9 @@
         </Grid.RowDefinitions>
 
         <Button Content="Revit API" Grid.Column="1" Grid.Row="1"></Button>
+    </Grid>-->
 
 
 
-    </Grid>
+
 </Window>

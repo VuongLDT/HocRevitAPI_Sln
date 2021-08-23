@@ -56,8 +56,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="Bai 1\Command.cs" />
-    <Compile Include="Bai 3 - WPF\WindowWPF.xaml.cs">
+    <Compile Include="Lesson04_SelectionFiltering\FilterColumn.cs" />
+    <Compile Include="Lesson04_SelectionFiltering\FilterCylindricalFace.cs" />
+    <Compile Include="Lesson04_SelectionFiltering\Lesson04Cmd.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="Lesson03-WPF\WindowWPF.xaml.cs">
       <DependentUpon>WindowWPF.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,7 +70,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Page Include="Bai 3 - WPF\WindowWPF.xaml">
+    <Page Include="Lesson03-WPF\WindowWPF.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
