@@ -12,9 +12,9 @@ namespace Lesson04_SelectionFiltering
     {
         public bool AllowElement(Element elem)
         {
-            int categoryID = elem.Category.Id.IntegerValue;
-            int structureColumnId = (int)BuiltInCategory.OST_StructuralColumns;
-            if (categoryID == structureColumnId)
+            int elem_CategoryId = elem.Category.Id.IntegerValue;
+            int categoryId = (int)BuiltInCategory.OST_StructuralColumns;
+            if (elem_CategoryId == categoryId)
             {
                 return true;
             }

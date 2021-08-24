@@ -22,8 +22,8 @@ namespace Lesson04_SelectionFiltering
 
         public bool AllowReference(Reference reference, XYZ position)
         {
-            Element e_Col = pdoc.GetElement(reference);
-            GeometryObject geometryObject = e_Col.GetGeometryObjectFromReference(reference);
+            Element elem = pdoc.GetElement(reference);
+            GeometryObject geometryObject = elem.GetGeometryObjectFromReference(reference);
             Face face = geometryObject as Face;
             if (face is CylindricalFace)
             {

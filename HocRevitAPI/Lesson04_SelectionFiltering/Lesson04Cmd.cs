@@ -41,7 +41,7 @@ namespace HocRevitAPI
 
             //ICollection<ElementId> ids = uidoc.Selection.GetElementIds();
             //double tong = 0;
-            //List<Element> allCot = new List<Element>();
+            //List<Element> allColumn = new List<Element>();
 
             //foreach (ElementId zzzzz in ids)
             //{
@@ -52,7 +52,7 @@ namespace HocRevitAPI
 
             //    if (categoryName.Equals("Structural Columns"))
             //    {
-            //        allCot.Add(e);
+            //        allColumn.Add(e);
             //        Parameter p = e.get_Parameter(BuiltInParameter.HOST_VOLUME_COMPUTED);
             //        tong = tong + p.AsDouble();
             //    }
@@ -63,7 +63,7 @@ namespace HocRevitAPI
 
             //    if (categoryId == structuralColumnId)
             //    {
-            //        allCot.Add(e);
+            //        allColumn.Add(e);
             //    }
             //}
 
@@ -76,48 +76,60 @@ namespace HocRevitAPI
 
             #region 1.2.1 Pick một đối tượng, dùng bộ lọc
 
-            /* 1. Lọc Element
-             * 2. Lọc Face
-             */
+            ///* 1. Lọc Element
+            // * 2. Lọc Face
+            // */
 
-            //uidoc.Selection.PickObject(ObjectType.Element);
-            //uidoc.Selection.PickObject(ObjectType.Element, "Hay chon Dam");
+            //// Pick chọn 1 đối tượng bất kì
+            //Reference r1 = uidoc.Selection.PickObject(ObjectType.Element);
+            //Reference r2 = uidoc.Selection.PickObject(ObjectType.Element, "Please Select Element");
 
-            //Reference r = uidoc.Selection.PickObject(ObjectType.Face);
+            //// Pick chọn 1 face bất kì
+            //Reference r_Face = uidoc.Selection.PickObject(ObjectType.Face);
 
-            //FilterColumn loc1 = new FilterColumn();
-            //Reference r_Column = uidoc.Selection.PickObject(ObjectType.Element, loc1, "Chọn Cột");
+            //// Chỉ chọn 1 cột
+            //FilterColumn filterColumn = new FilterColumn();
+            //Reference r_Column = uidoc.Selection.PickObject(ObjectType.Element, filterColumn, "Please Select Column");
 
-            //FilterColumn locCot = new FilterColumn();
-            //Reference r_FaceColumn = uidoc.Selection.PickObject(ObjectType.Face, locCot, "Hay chon Face cot");
+            //Element elem_Column = doc.GetElement(r_Column);
+            //ElementId elemId_Column = r_Column.ElementId;
 
-            //FilterCylindricalFace locFaceCylindrical = new FilterCylindricalFace(doc);
-            //Reference r_FaceCylindrical = uidoc.Selection.PickObject(ObjectType.Face, locFaceCylindrical, "Hay chon Face Cylindrical");
+            ////----------------------------------------------------
+            //// Chỉ chọn 1 mặt cột
+            //FilterColumn filterColumnFace = new FilterColumn();
+            //Reference r_FaceColumn = uidoc.Selection.PickObject(ObjectType.Face, filterColumnFace, "Please Select Column Face");
 
-            //Element e_Col = doc.GetElement(r_FaceColumn);
-            //GeometryObject geometryObject = e_Col.GetGeometryObjectFromReference(r_FaceColumn);
+            //Element elem_containFace = doc.GetElement(r_FaceColumn);
+            //GeometryObject geometryObject = elem_containFace.GetGeometryObjectFromReference(r_FaceColumn);
             //Face face = geometryObject as Face;
 
             //if (face != null)
             //{
-            //    double dienTich = UnitUtils.ConvertFromInternalUnits(face.Area, UnitTypeId.SquareMeters);
-            //    MessageBox.Show(dienTich.ToString());
+            //    //double area = face.Area;
+            //    double area = UnitUtils.ConvertFromInternalUnits(face.Area, UnitTypeId.SquareMeters);
+            //    MessageBox.Show(area.ToString());
             //}
+
+            //// Chỉ chọn 1 mặt cong loại CylindricalFace
+            //FilterCylindricalFace filterFaceCylindrical = new FilterCylindricalFace(doc);
+            //Reference r_FaceCylindrical = uidoc.Selection.PickObject(ObjectType.Face, filterFaceCylindrical, "Please Select Cylindrical Face");
 
             #endregion 1.2.1 Pick một đối tượng, dùng bộ lọc
 
             #region 1.2.2 Pick nhiều đối tượng
 
             //IList<Reference> references = uidoc.Selection.PickObjects(ObjectType.Element);
-            //foreach (Reference reference in references)
+            //List<Element> elems = new List<Element>();
+            //List<ElementId> elemIds = new List<ElementId>();
+            //foreach (Reference r in references)
             //{
-            //    //Xử lý các đối tượng vừa được chọn
+            //    elems.Add(doc.GetElement((r)));
+            //    elemIds.Add(r.ElementId);
             //}
 
             #endregion 1.2.2 Pick nhiều đối tượng
 
             #endregion 1.2: PickObject
-
             #endregion A: Dùng class Selection
 
 
